@@ -16,4 +16,8 @@ describe('decode', () => {
     it('returns GENERAŁ COFFEE for RTLTGŻM YJSSTT', () => {
         expect(decode('RTLTGŻM YJSSTT')).toEqual('GENERAŁ COFFEE')
     });
+
+    it('returns GENERAŁ COFFEE NIE MIAŁ ŁOMU for Rtltgżm Yjsstt lót łóżm mjłd', () => {
+        expect(decode('Rtltgżm Yjsstt lót łóżm mjłd')).toEqual('GENERAŁ COFFEE NIE MIAŁ ŁOMU')
+    });
 });

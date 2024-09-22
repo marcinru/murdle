@@ -7,7 +7,7 @@ export const decode = (str) => {
         if (char === ' ') {
             result += ' ';
         } else {
-            const index = inverted.indexOf(char);
+            const index = inverted.indexOf(char.toUpperCase());
             result += alphabet[index];
         }
     }
