@@ -12,4 +12,8 @@ describe('decode', () => {
     it('returns GE for RT', () => {
         expect(decode('RT')).toEqual('GE')
     });
+
+    it('returns GENERAŁ for RTLTGŻM', () => {
+        expect(decode('RTLTGŻM')).toEqual('GENERAŁ')
+    });
 });
