@@ -1,15 +1,10 @@
-import { alphabet, inverted } from './alphabet';
+import { alphabet, inverted } from "./alphabet";
 
 export const decode = (str) => {
-    let result = '';
-    for (let i = 0; i < str.length; i++) {
-        const char = str.charAt(i);
-        if (char === ' ') {
-            result += ' ';
-        } else {
-            const index = inverted.indexOf(char.toUpperCase());
-            result += alphabet[index];
-        }
-    }
-    return result;
-}
+  let result = "";
+  for (let i = 0; i < str.length; i++) {
+    const index = inverted.indexOf(str.charAt(i));
+    result += alphabet[index];
+  }
+  return result;
+};
